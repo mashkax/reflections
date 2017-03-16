@@ -1,0 +1,15 @@
+
+Make a copy of an entire Git repository, including the history, onto your own computer.
+git clone repo_uri
+
+Show the commits made in this repository, starting with the most recent.
+git log
+
+Compare two commits, printing each line that is present in one commit but not the other.
+git diff first_commit_id second_commit_id
+
+Temporarily reset all files in a directory to their state at the time of a specific commit.
+git checkout commit_id
+
+Create a repository in the current directory
+git init
