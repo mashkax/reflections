@@ -13,3 +13,12 @@ git checkout commit_id
 
 Create a repository in the current directory
 git init
+
+Add a file to the staging area for grouping changes into specific commits
+git add file_name
+
+View the status of the working directory changes
+git status
+
+Commit the staged changes 
+git commit
