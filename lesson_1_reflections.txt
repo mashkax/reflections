@@ -7,9 +7,16 @@ git log
 
 Compare two commits, printing each line that is present in one commit but not the other.
 git diff first_commit_id second_commit_id
+Compare working dir against staging area
+git diff
+Compare staging area against most recent commit (master)
+git diff --staged
 
 Temporarily reset all files in a directory to their state at the time of a specific commit.
 git checkout commit_id
+
+"Uncheckout" old commit, or reset git back to most recent commit of branch, back after checking out older commit
+git checkout master
 
 Create a repository in the current directory
 git init
@@ -22,3 +29,24 @@ git status
 
 Commit the staged changes 
 git commit
+
+View list of banches and the current branch checked out
+git branch
+
+Create a new branch
+git branch branch_name
+
+Switch to a different branch
+git checkout branch_name
+
+Create a new branch and switch to it
+git checkout -b branch_name
+
+Merge 2 branches
+git merge branch_name_1 branch_name_2
+
+Show diffs for a commit against it's parent commit, without knowing what it's parent is (useful in merged branches when the timestamp view of commits might not necessarily imply parent-child ordering in the view)
+git show commit_id
+
+Delete a branch that is no longer needed (likely because it is merged with master)
+git branch -d branch_name
