@@ -1,5 +1,5 @@
 
-Make a copy of an entire Git repository, including the history, onto your own computer.
+Make a copy of an entire Git repository, including the history, onto your own computer. If the repo is a remote one, this will also setup an origin remote for you and associate that with your local clone
 git clone repo_uri
 
 Show the commits made in this repository, starting with the most recent.
@@ -50,3 +50,26 @@ git show commit_id
 
 Delete a branch that is no longer needed (likely because it is merged with master)
 git branch -d branch_name
+
+View the remote branch associated with a given branch
+git remote [-v]
+
+Add a remote branch for a given branch
+git remote add remote_branch_name_usually_named_origin remote_branch_url_from_github
+
+Push commits from local to remote
+git push origin master
+
+Fetch commits that are on remote (origin/master) down to local, without merging with local's latest
+git fetch origin
+
+Pull commits from remote to local (fetch and merge)
+git pull origin master
+this is equivalent to doing the following:
+git fetch origin
+git merge master origin/master
+
+Some defs:
+Branch: A tag mark on a commit
+Clone: A replica of a given branch(commit)
+Fork: A branch(commit) cloned on git hub server
